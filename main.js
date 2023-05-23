@@ -19,3 +19,16 @@ function createBoard(size) {
         board.insertAdjacentElement("beforeend", div);
     }
 }
+
+
+function getSize() {
+    let input = prompt("What do you want the size of the board to be?");
+    let message = document.querySelector("#message");
+    if(input == "") {
+        message.innerHTML = "Please provide a number";
+    } else if(input < 0 || input > 100) {
+        message.innerHTML = "Number must be between 1 and 100 inclusive";
+    } else {
+        message.innerHTML = "Now you can play";
+    }
+}
